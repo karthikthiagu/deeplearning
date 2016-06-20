@@ -1,0 +1,11 @@
+General scripts that do not belong to Caffe or Theano in particular.
+
+-> biasVariance.py - This is a script that demonstrates the bias-variance tradeoff using probability 
+distributions and histograms. We are need to estimate a probability distribution, a Gaussian in our
+case. The model we use to estimate it is a histogram. The model complexity is given by the number of 
+bins. Samples drawn from the Gaussian will function as training examples. We will vary the bin size to 
+get an understanding of bias and variance.
+
+To run this code : python biasVariance.py
+
+Dependencies : you will need numpy and matplotlib
