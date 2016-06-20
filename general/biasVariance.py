@@ -10,6 +10,7 @@ plot_window_2 = fig.add_subplot(122)
 def learnAndPlot(plot_window, bins, num_examples):
     # Learn the distribution
     # num_runs is the number of times the model (histogram) will be learnt
+    # At the end of each run, we plot the histogram obtained
     num_runs = 50
     for run in range(num_runs):
         # Draw training examples from the true distribution, a Gaussian, in this case
