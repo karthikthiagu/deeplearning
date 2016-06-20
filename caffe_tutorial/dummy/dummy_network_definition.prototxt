@@ -1,0 +1,32 @@
+name : "dummy"
+layer {
+    name : "dummy_data"
+    type : "HDF5Data"
+    top : "x_1"
+    top : "x_2"
+    hdf5_data_param {
+        source : "./dummy_data.txt"
+        batch_size : 5
+    }
+}
+layer {
+    name : "squareit"
+    type : "Power"
+    bottom : "x_2"
+    top : "x_2_squared"
+    power_param {
+        scale : 1
+        shift : 1
+        power : 2
+    }
+}
+#layer {
+#    name : "addit"
+#    type : "Eltwise"
+#    bottom : "x_1"
+#    bottom : "x_2_squared"
+#    top : "x_1_plus_x_2_squared"
+#    eltwise_param {
+#        operation : SUM
+#    }
+#}

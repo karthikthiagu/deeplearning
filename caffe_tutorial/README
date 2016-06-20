@@ -1,0 +1,20 @@
+-> Dependencies 
+    numpy : sudo apt-get install python-numpy
+    h5py  : sudo apt-get install python-h5py
+    cv2   : http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html 
+            Also install python wrapper around cv2
+Add cv2, h5py and numpy to PYTHON PATH
+
+Enter mnist folder
+-> data.py : generates train, val and test data
+Run as : python data.py
+This creates train, validation and test data folders with corresponding images.
+Each image is of the form <image_label>_count.jpg, where count is a counter 
+that runs from 0 to the number of images in that stage
+
+-> create lmdb using this command : ../../../build/tools/convert_imageset ./data/ data/test.txt data/test_lmdb
+Repeat this by replacing test_lmdb with train and valid
+
+-> train model using this command    : ../../../build/tools/caffe train --solver=solver.prototxt
+
+-> finetune model using this command : ../../../build/tools/caffe train --solver=solver.prototxt -weights=trained_models/lr_first_run.caffemodel

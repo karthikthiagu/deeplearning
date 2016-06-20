@@ -1,3 +1,7 @@
 Deep learning, RISE Lab, IIT-M
 
 This repo will contain code developed by members of the deep learning reading group.
+
+Currently there are two branches
+    -> caffe
+    -> theano
