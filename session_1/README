@@ -1,0 +1,4 @@
+
+-> logisticRegression.py - this is a program that creates a toy binary distribution 
+and builds a logistic regression classifier using Theano.
+To run this : python logisticRegression.py
